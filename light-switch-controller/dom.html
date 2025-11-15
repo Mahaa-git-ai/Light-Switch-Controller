@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="dom.css">
+	</head>
+	<body>
+		<div class="cat-projct-sec">
+			<div class="container">
+				<div class="bulb-img"><img src="images/bulb-go-on-img.png" id="buldImage"/></div>
+				<div class="cat-img"><img src="images/cat-img.png" id="catImage" /></div>
+				<div class="switch-board">
+					<h1 id="headingElement">Switch On</h1>
+					<button onclick="switchedOn()" id="switchOn">On</button>
+					<button onclick="switchedOff()" id="switchOff">Off</button>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		function switchedOn() {
+			document.getElementById("buldImage").src = "images/bulb-go-on-img.png";
+			document.getElementById("catImage").src = "images/cat-img.png";
+			document.getElementById("headingElement").textContent = "Switched On";
+			document.getElementById("switchOn").style.backgroundColor = "green";
+			document.getElementById("switchOff").style.backgroundColor = "gray";
+
+		}
+		function switchedOff() {
+			document.getElementById("buldImage").src = "images/bulb-go-off-img.png";
+			document.getElementById("catImage").src = "images/cat-eyes-img.png";
+			document.getElementById("headingElement").textContent = "Switched Off";
+			document.getElementById("switchOff").style.backgroundColor = "red";
+			document.getElementById("switchOn").style.backgroundColor = "gray";
+		}
+	</script>
+</html>
